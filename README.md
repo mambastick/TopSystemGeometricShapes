@@ -101,6 +101,23 @@ Triangle triangle = new Triangle(5, TriangleType.Isosceles);
 triangle.Draw();
 ```
 
+#### Создание всех объектов и отрисовка через цикл (Полиморфизм)
+```csharp
+Shape circle = new Circle(10);
+Shape ellipse = new Ellipse(5, 7);
+Shape triangle = new Triangle(10, TriangleType.LeftAngle);
+Shape square = new Square(5);
+Shape rectangle = new Rectangle(5, 10);
+
+var shapes = new List<Shape>()
+{
+    circle, ellipse, triangle, square, rectangle
+};
+
+foreach (var shape in shapes)
+    shape.Draw();
+```
+
 ## Примечание
 
 Эта библиотека разработана в качестве тестового задания для IT компании "Топ Системы".
